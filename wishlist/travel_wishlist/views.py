@@ -32,8 +32,6 @@ def place_was_visited(request, place_pk):
     return redirect('place_list') # redirect to wishlist places
 
 
-
-
 def about(request):
     author = 'Suban'
     about = 'A website to create a list of places to visit'

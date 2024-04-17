@@ -1,17 +1,17 @@
 span.place-name {
     display: inline-block;
-    width: 70;
+    width: 70px;
 }
 
 form.visited-form {
-    display: inline;
+    display: inline-block;
 }
 
 div.wishlist-place {
     margin: 20px
 }
 
-lebel {
+label {
     display: inline-block;
     padding-right: 8px;
 }
