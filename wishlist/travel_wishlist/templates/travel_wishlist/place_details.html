@@ -3,10 +3,10 @@
 {% block content %}
 
 <h2>{{ place.name }}</h2>
-
+  
 {% if place.visited %}
-
-<P>You have visited {{ place.name }}</p>
+  
+    <P>You have visited {{ place.name }}</p>
 
     <h3>Notes</h3>
     <P>{{ place.notes|default:"No Notes" }}</p>
@@ -38,15 +38,15 @@
 
 
 {% else %}
-    <p>You have not visited {{ place.name }}</p>
 
-    <form action="{% url 'place_was_visited' place.pk %}" method="POST">
-        {% csrf_token %}
-        <button type="submit" class="visited">Visited</button>
-    </form>
+  <p>You have not visited {{ place.name }} yet.</p>
 
+  <form action="{% url 'place_was_visited' place.pk %}" method="POST">
+    {% csrf_token %}
+    <button type=submit class="visited">Visited!</button>
+  </form>
+    
 {% endif %}
-
 
 <form action="{% url 'delete_place' place.pk %}" method="POST">
     {% csrf_token %}
@@ -56,3 +56,4 @@
 <script src="{% static 'js/confirm_delete.js' %}"></script>
 
 {% endblock %}
+

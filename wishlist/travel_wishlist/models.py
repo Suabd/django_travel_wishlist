@@ -31,7 +31,6 @@ class Place(models.Model):
         super().delete(*args, **kwargs)
 
 
-
     def __str__(self):
         photo_str = self.photo.url if self.photo else 'no photo'
         notes_str = self.notes[100:] if self.notes else 'no notes'
